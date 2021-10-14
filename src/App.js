@@ -5,7 +5,7 @@ import Comments from './Comment';
 import AproveCard from './AproveCard';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import Season from './Season'
 function getTime(){return (new Date()).toLocaleTimeString()}
 class App extends React.Component {
   
@@ -27,6 +27,7 @@ render (){
   <button style={{backgroundColor:'blue'}}>Click Me</button>
   <div>{getTime()}</div>
   <div>latitude:{this.state.lat?this.state.lat:this.state.err} and longitude:{this.state.long?this.state.long:this.state.err}</div>
+  <div><Season lat={this.state.lat}/></div>
   </div>
   <AproveCard>
   <Comments author="Sajib"/>
